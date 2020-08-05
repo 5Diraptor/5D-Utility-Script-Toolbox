@@ -21,4 +21,4 @@ REM use ImageMagick to process the PSD files
     magick mogrify -format png -path "Studio Web PNG" -resize 500X500 -gravity Center -background transparent -extent 500X500 *.psd[0]
   PAUSE
   
-  REM removed the FOR loop as it was causing unwanted loop.  This version should be functioning correctly.
+  REM removed the FOR loop as it was causing unwanted loop.  This version is functioning correctly.
