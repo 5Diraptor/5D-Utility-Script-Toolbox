@@ -24,4 +24,4 @@ REM use ImageMagick to process the PSD files
   )
   PAUSE
   
-  REM this script is inefficient.  It loops over the square of the .psd files in the directory.
+REM this script is inefficient.  It loops over the square of the .psd files in the directory.
