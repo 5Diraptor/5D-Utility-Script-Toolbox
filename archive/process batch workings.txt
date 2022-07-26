@@ -1,0 +1,42 @@
+C:\Users\tom.morton>
+magick convert 
+"M:\Box Sync\Product Data (tom.morton@armorgard.co.uk)\Armorgard LoadAll\Studio Images\LA750 - 5. Editing images\LA750_close_castors.psd[0]" 
+-resize 4600x4600  
+"M:\Box Sync\Product Data (tom.morton@armorgard.co.uk)\Armorgard LoadAll\Studio Images\LA750 - 5. Editing images\testing2.png"
+
+
+magick mogrify -format png -path path2/outputfolder -fill black -pointsize 120 -resize 4600x4600 -compress LZW *.jpg
+
+
+
+cd /d "M:\Box Sync\Product Data (tom.morton@armorgard.co.uk)\Armorgard LoadAll\Studio Images\LA750 - 5. Editing images"
+md no1 no2 no3
+
+
+
+ %~d1
+  CD "%~p1"
+  MD small
+  MD med
+  MD large
+  FOR %%a in (*.psd) DO (
+    ECHO Processing file: "%%~nxa"
+    magick convert %%a[0] -resize 4600x4600% large\%%a.png
+    magick convert %%a[0] -resize 2400x2400% med\%%a.png
+    magick convert %%a[0] -resize 1000x1000% small\%%a.png
+  )
+  PAUSE
+
+
+
+
+
+THIS WORKS for one export:
+
+ %~d1
+  CD "%~p1"
+  MD small
+  MD med
+  MD large
+  FOR %%a in (*.psd) DO magick convert %%a[0] -resize 50%% large\%%a.png
+  PAUSE
