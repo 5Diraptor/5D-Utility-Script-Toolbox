@@ -1,0 +1,15 @@
+ %~d1
+  CD "%~f1"
+  MD "Data Sheets AU"
+  MD "Data Sheets EN"
+  MD "Data Sheets FR"
+  MD "Marketing Collateral AU"
+  MD "Marketing Collateral EN"
+  MD "Marketing Collateral FR"
+  MD "Product Images"
+  MD "Product Videos"
+  MD "User Manual AU"
+  MD "User Manual EN"
+  MD "User Manual FR"
+
+msg "%username%" All templated PRODUCT INFO folders have been created in source directory "%~f1"
